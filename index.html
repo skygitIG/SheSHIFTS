@@ -7,8 +7,138 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to SheSHIFTS</h1>
-    <p>This is the main page of SheSHIFTS project.</p>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>SheSHIFTS</span>
+            </div>
+            <a href="#" class="cta-button">Call Us Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+     <section style="background-color: #FFF5FB;">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>SheSHIFTS: From Surviving To Thriving Through Menopause</h1>
+            <p>Navigate menopause with confidence through our comprehensive 6-month program designed specifically for professional women. Combining personalized Conscious Medicine, SheSHIFTS provides structured support and evidence-based strategies to help you thrive during this transformative phase of life.</p>
+            <a href="#" class="explore-button">Explore Content</a>
+        </div>
+
+        <div class="contact-form">
+            <h2>Let's Talk</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone?</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    </section>
+
+    <!-- Who Does This Program Serve Section -->
+    <section class="serve-section">
+        <div class="serve-container">
+            <h2>Who Does This Program Serve?</h2>
+            <p>Executive women experiencing immediate emotional/physical symptoms and professional medicine with navigating this significant life transition with confidence, support, and evidence-based strategies.</p>
+            <a href="#" class="browse-button">Schedule a Consult</a>
+
+            <div class="carousel-wrapper">
+                <!-- Left Navigation Button -->
+                <button class="nav-button" id="prevBtn" aria-label="Previous">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+
+                <!-- Carousel Track -->
+                <div class="carousel-track">
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="carousel-card">
+                            <img src="images/carousel-image-01.png" alt="Professional support" class="card-image">
+                            <div class="card-content">
+                                <h3>Professional Support During their transition</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/carousel-image-02.png" alt="Evidence-based wellness" class="card-image">
+                            <div class="card-content">
+                                <h3>Evidence-based wellness strategies</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/carousel-image-03.png" alt="Community support" class="card-image">
+                            <div class="card-content">
+                                <h3>Community with other professional women</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/carousel-image-04.png" alt="Holistic approach" class="card-image">
+                            <div class="card-content">
+                                <h3>Holistic approach to menopause management</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/carousel-image-05.png" alt="Personalized guidance" class="card-image">
+                            <div class="card-content">
+                                <h3>Personalized guidance and support</h3>
+                            </div>
+                        </div>
+                        <!-- <div class="carousel-card">
+                            <img src="https://images.unsplash.com/photo-1573497019418-b69f02d0fb00?w=400&h=300&fit=crop" alt="Career balance" class="card-image">
+                            <div class="card-content">
+                                <h3>Balance career and wellbeing effectively</h3>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Right Navigation Button -->
+                <button class="nav-button" id="nextBtn" aria-label="Next">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Does This Program Serve Section -->
+    <section class="serve-section approach-section">
+        <div class="serve-container">
+            <h2>Our Proven 6-Phase Approach</h2>
+            <p>A carefully structured transformation journey that takes you from surviving menopause to thriving through it, with each phase building upon the last to create lasting change that supports you.</p>
+            <a href="#" class="browse-button">Schedule a Consult</a>
+        </div>
+        <div class="approach-cards">
+            <div class="card-a">
+                <div class="approach-card-img">
+                    <img src="" alt="">
+                </div>
+                <div class="approach-card-content">
+                    <div class="acc-pre-head">Phase 1</div>
+                    <div class="acc-head">Foundation & Assessment</div>
+                    <div class="acc-paragraph">Complete lifestyle evaluation and goal setting to create your personalized transformation roadmap.</div>
+                    <a href="#" class="acc-btn">Schedule a Consult</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="script.js"></script>
