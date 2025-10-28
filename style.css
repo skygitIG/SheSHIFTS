@@ -22,7 +22,7 @@ body {
 /* Header */
 header {
     background-color: #FFF5FB;
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #e0d0d2;
 }
 
@@ -45,14 +45,14 @@ header {
 }
 
 .logo-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #4a2c4e;
-    border-radius: 4px;
+    /* width: 30px; */
+    /* height: 30px; */
+    /* background-color: #4a2c4e; */
+    /* border-radius: 4px; */
 }
 
 .cta-button {
-    background-color: #2d1b2e;
+    background-color: #350C41;
     color: white;
     padding: 12px 28px;
     border-radius: 25px;
@@ -187,13 +187,17 @@ header {
 /* Who Does This Program Serve Section */
 .serve-section {
     /* background-color: white; */
-    padding: 80px 0;
+    padding: 80px 20px;
 }
 
-.serve-container {
+.approach-section{
+    padding: 80px 20px;
+}
+
+.serve-container, .approach-cards, .cta-container {
     max-width: 1520px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
 }
@@ -246,7 +250,7 @@ header {
     display: flex;
     align-items: center;
     gap: 30px;
-    padding: 20px 0;
+    padding: 20px 0 0;
 }
 
 .carousel-track {
@@ -327,6 +331,144 @@ line-height: 30px;
     background-color: #FFF5FB;
 }
 
+.approach-cards{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.card-a{
+        display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.card-a .approach-card-content{
+    width: 100%;
+    padding-left: 80px;
+}
+
+.card-b .approach-card-content{
+    width: 100%;
+    padding-left: 80px;
+}
+.card-b{
+        display: flex;
+        flex-direction: row-reverse;
+    gap: 50px;
+    align-items: center;
+}
+
+.acc-pre-head{
+    color: #000;
+font-family: 'Nunito_Sans', sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 32px;
+text-transform: uppercase;
+}
+.acc-head{
+    color: #1F2636;
+font-family: 'Boston-Angel-Regular', sans-serif;
+font-size: 32px;
+font-weight: 400;
+line-height: 68px;
+margin: 8px 0;
+}
+.acc-paragraph{
+    color: #000;
+font-family: 'Nunito_Sans', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+margin-bottom: 24.8px;
+max-width: 459px;
+}
+.acc-btn{
+    color: #350C41;
+font-family: 'Nunito_Sans', sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration-line: underline;
+}
+
+.cta-head{
+    color: #2D0239;
+font-family: 'Boston-Angel-Regular', sans-serif;
+font-size: 40px;
+font-weight: 400;
+line-height: 60px;
+margin: 8px 0;
+}
+
+.cta-container{
+    display: grid;
+    padding: 80px 40px;
+  grid-template-columns: 50% 50%;
+}
+
+footer{
+
+    background: #6C1B84;
+    padding: 90px 40px 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    max-width: 1444px;
+    margin: 0 auto;
+}
+
+.footer-info{
+    margin: 80px 0 30px;
+    font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+font-family: proxima-nova, sans-serif;
+}
+
+.footer-btn{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-decoration-line: underline;
+font-family: proxima-nova, sans-serif;
+}
+
+.footer-btn a{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 2px 0 0;
+}
+
+.footer-bottom{
+    background-color: #f7e7f0;
+    display: flex;
+    padding: 25px 70px 30px;
+    justify-content: space-between;
+}
+.footer-rights{
+    color: #6C1B84;
+font-family: "Golos Text", sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+}
+.social-icons{
+    gap: 14px;
+    display: flex;
+}
+
 /* Desktop: 3 cards visible */
 @media (min-width: 1024px) {
     .carousel-card {
@@ -358,6 +500,15 @@ line-height: 30px;
 }
 
 /* Responsive */
+
+@media (max-width: 1440px){
+    .approach-card-img img{
+        width: 630px;
+    }
+    .footer-bottom{
+    padding: 25px 40px 30px;
+}
+}
 @media (max-width: 1200px) {
 
     .header-container{
@@ -399,9 +550,36 @@ line-height: 30px;
         font-size: 16px;
         line-height: 26px;
     }
+
+    .approach-card-img img{
+        width: 600px;
+    }
+
+    .card-a {
+    gap: 40px;
+}
+
+    .card-a .approach-card-content{
+    width: 100%;
+    padding-left: 20px;
+}
+
+.card-b .approach-card-content{
+    width: 100%;
+    padding-left: 0px;
+}
+}
+
+@media (max-width: 1024px){
+    .approach-card-img img{
+        width: 500px;
+    }
 }
 
 @media (max-width: 768px) {
+    .logo-icon img{
+        width: 60%;
+    }
     .hero-section {
         padding: 40px 20px;
     }
@@ -436,8 +614,106 @@ line-height: 30px;
         padding: 0 20px;
     }
 
+    .approach-section, .serve-section{
+        padding: 60px 0;
+    }
+
+
+
     .nav-button {
     width: 35px;
     height: 35px;
     }
+
+        .card-a .approach-card-content {
+        padding-left: 0px;
+    }
+
+    .approach-card-img img{
+        width: 350px;
+    }
+    .acc-pre-head{
+font-size: 14px;
+    }
+    .acc-head {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 4px 0 2px;
+}
+.acc-paragraph {
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 8.8px;
+}
+.acc-btn {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.cta-container{
+    padding: 60px 20px;
+}
+
+.cta-head {
+    font-size: 30px;
+    line-height: 43px;
+}
+
+footer {
+    padding: 50px 20px 40px;
+}
+.footer-logo img{
+    width: 60%;
+}
+.footer-info {
+    margin: 40px 0 20px;
+    font-size: 10px;
+    line-height: 16px;
+}
+.footer-btn {
+    font-size: 11px;
+    line-height: 16px;
+}
+.footer-bottom{
+    padding: 20px;
+}
+.cta-button {
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 400;
+}
+}
+
+@media (max-width: 480px){
+        .card-a {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card-b {
+    flex-direction: column;
+    gap: 10px;
+}
+    .approach-card-img img {
+        width: 100%;
+    }
+    .acc-pre-head {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .cta-container {
+    grid-template-columns: 100%;
+    gap: 40px;
+}
+.footer-bottom {
+    padding: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-rights {
+    font-size: 10px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
 }
