@@ -14,16 +14,16 @@
     src: url(fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 }
 
-body {
+/* body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     color: #2d1b2e;
-}
+} */
 
 /* Header */
 header {
     background-color: #FFF5FB;
     padding: 10px 0;
-    border-bottom: 1px solid #e0d0d2;
+    border-bottom: 1px solid #A57CB3;
 }
 
 .header-container {
@@ -59,6 +59,7 @@ header {
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s;
+    font-family: 'inter', sans-serif;
 }
 
 .cta-button:hover {
