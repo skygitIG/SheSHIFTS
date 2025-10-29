@@ -120,13 +120,17 @@ header {
     background-color: #5d3d5e;
 }
 
+#_builder-form .heading-element div p {
+    font-family: 'Boston-Angel-Regular', sans-serif !important;
+}
+
 /* Contact Form */
-.contact-form {
+/* .contact-form {
     background-color: white;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
+} */
 
 .contact-form h2 {
     font-size: 28px;
@@ -414,6 +418,10 @@ header {
     display: grid;
     padding: 80px 40px;
     grid-template-columns: 50% 50%;
+}
+
+.cta-form iframe {
+    min-height: 535px;
 }
 
 footer {
@@ -734,6 +742,15 @@ footer {
     .cta-container {
         grid-template-columns: 100%;
         gap: 40px;
+    }
+
+    .cta-form iframe {
+        min-height: 460px;
+    }
+
+    iframe .text-element {
+        font-size: 25px;
+        line-height: 30px;
     }
 
     .footer-bottom {
