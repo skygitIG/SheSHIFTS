@@ -256,7 +256,8 @@ header {
 }
 
 /* Carousel */
-.carousel-wrapper {
+
+.new-carousel-wrapper {
     position: relative;
     display: flex;
     align-items: center;
@@ -264,35 +265,34 @@ header {
     padding: 20px 0 0;
 }
 
-.carousel-track {
+.new-carousel-track {
     overflow: hidden;
     flex: 1;
 }
 
-.carousel-container {
+.new-carousel-container {
     display: flex;
     gap: 30px;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-card {
-    /* background-color: #f5e6e8; */
+.new-carousel-card {
     overflow: hidden;
     flex-shrink: 0;
 }
 
-.card-image {
+.new-card-image {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.card-content {
+.new-card-content {
     padding: 10px 0;
 }
 
-.card-content h3 {
+.new-card-content h3 {
     color: #000;
     font-family: 'Nunito_Sans', sans-serif;
     font-size: 24px;
@@ -301,7 +301,7 @@ header {
     line-height: 30px;
 }
 
-.nav-button {
+.new-nav-button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -316,25 +316,58 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-button:hover:not(:disabled) {
+.new-nav-button:hover:not(:disabled) {
     background-color: #2d1b2e;
 }
 
-.nav-button:hover:not(:disabled) svg {
+.new-nav-button:hover:not(:disabled) svg {
     fill: white;
 }
 
-.nav-button:disabled {
+.new-nav-button:disabled {
     opacity: 0.3;
     cursor: not-allowed;
 }
 
-.nav-button svg {
+.new-nav-button svg {
     width: 24px;
     height: 24px;
     fill: #2d1b2e;
     transition: fill 0.3s;
 }
+
+/* Desktop: 3 cards visible */
+@media (min-width: 1024px) {
+    .new-carousel-card {
+        width: calc((100% - 60px) / 3);
+    }
+}
+
+/* Tablet: 2 cards visible */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .new-carousel-card {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+/* Mobile: 1 card visible */
+@media (max-width: 767px) {
+    .new-carousel-card {
+        width: 100%;
+    }
+
+    .new-carousel-wrapper {
+        gap: 15px;
+    }
+
+    .new-nav-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Carousel End */
+
 
 /* approach-section */
 
@@ -489,36 +522,6 @@ footer {
 .social-icons {
     gap: 14px;
     display: flex;
-}
-
-/* Desktop: 3 cards visible */
-@media (min-width: 1024px) {
-    .carousel-card {
-        width: calc((100% - 60px) / 3);
-    }
-}
-
-/* Tablet: 2 cards visible */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .carousel-card {
-        width: calc((100% - 30px) / 2);
-    }
-}
-
-/* Mobile: 1 card visible */
-@media (max-width: 767px) {
-    .carousel-card {
-        width: 100%;
-    }
-
-    .carousel-wrapper {
-        gap: 15px;
-    }
-
-    .nav-button {
-        width: 40px;
-        height: 40px;
-    }
 }
 
 /* Responsive */
@@ -733,6 +736,12 @@ footer {
     .card-b {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .new-card-content h3 {
+        font-size: 18px;
+        text-align: center;
+        line-height: 25px;
     }
 
     .approach-card-img img {

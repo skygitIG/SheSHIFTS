@@ -53,15 +53,13 @@
                 navigating this significant life transition with confidence, support, and evidence-based strategies.</p>
             <a href="#" class="browse-button">Register for Webinar</a>
 
-            <div class="carousel-wrapper">
-                <!-- Left Navigation Button -->
+            <!-- <div class="carousel-wrapper">
                 <button class="nav-button" id="prevBtn" aria-label="Previous">
                     <svg viewBox="0 0 24 24">
                         <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
                     </svg>
                 </button>
 
-                <!-- Carousel Track -->
                 <div class="carousel-track">
                     <div class="carousel-container" id="carouselContainer">
                         <div class="carousel-card">
@@ -94,22 +92,132 @@
                                 <h3>Personalized guidance and support</h3>
                             </div>
                         </div>
-                        <!-- <div class="carousel-card">
-                            <img src="https://images.unsplash.com/photo-1573497019418-b69f02d0fb00?w=400&h=300&fit=crop" alt="Career balance" class="card-image">
-                            <div class="card-content">
-                                <h3>Balance career and wellbeing effectively</h3>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
-                <!-- Right Navigation Button -->
                 <button class="nav-button" id="nextBtn" aria-label="Next">
                     <svg viewBox="0 0 24 24">
                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                     </svg>
                 </button>
+            </div> -->
+
+
+            <!-- new -->
+
+
+            <div class="new-carousel-wrapper">
+                <!-- Left Navigation Button -->
+                <button class="new-nav-button" id="new-prevBtn" aria-label="Previous">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                </button>
+
+                <!-- Carousel Track -->
+                <div class="new-carousel-track">
+                    <div class="new-carousel-container" id="new-carouselContainer">
+                        <div class="new-carousel-card">
+                            <img src="images/carousel-image-01.png" alt="Professional support" class="new-card-image">
+                            <div class="new-card-content">
+                                <h3>Professional Support During their transition</h3>
+                            </div>
+                        </div>
+                        <div class="new-carousel-card">
+                            <img src="images/carousel-image-02.png" alt="Evidence-based wellness"
+                                class="new-card-image">
+                            <div class="new-card-content">
+                                <h3>Evidence-based wellness strategies</h3>
+                            </div>
+                        </div>
+                        <div class="new-carousel-card">
+                            <img src="images/carousel-image-03.png" alt="Community support" class="new-card-image">
+                            <div class="new-card-content">
+                                <h3>Community with other professional women</h3>
+                            </div>
+                        </div>
+                        <div class="new-carousel-card">
+                            <img src="images/carousel-image-04.png" alt="Holistic approach" class="new-card-image">
+                            <div class="new-card-content">
+                                <h3>Holistic approach to menopause management</h3>
+                            </div>
+                        </div>
+                        <div class="new-carousel-card">
+                            <img src="images/carousel-image-05.png" alt="Personalized guidance" class="new-card-image">
+                            <div class="new-card-content">
+                                <h3>Personalized guidance and support</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Navigation Button -->
+                <button class="new-nav-button" id="new-nextBtn" aria-label="Next">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                    </svg>
+                </button>
             </div>
+
+            <script>
+                window.addEventListener('load', () => {
+                    const carouselContainer = document.getElementById('new-carouselContainer');
+                    const prevBtn = document.getElementById('new-prevBtn');
+                    const nextBtn = document.getElementById('new-nextBtn');
+                    const totalCards = carouselContainer.children.length;
+                    let currentIndex = 0;
+
+                    function getVisibleCards() {
+                        if (window.innerWidth >= 1024) return 3; // Desktop
+                        if (window.innerWidth >= 768) return 2;  // Tablet
+                        return 1;                               // Mobile
+                    }
+
+                    function updateCarousel() {
+                        const visibleCards = getVisibleCards();
+                        const cardWidth = carouselContainer.querySelector('.new-carousel-card').offsetWidth;
+                        const gap = 30;
+                        const offset = currentIndex * (cardWidth + gap);
+                        carouselContainer.style.transform = `translateX(-${offset}px)`;
+
+                        prevBtn.disabled = currentIndex === 0;
+                        nextBtn.disabled = currentIndex >= totalCards - visibleCards;
+                    }
+
+                    prevBtn.addEventListener('click', () => {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            updateCarousel();
+                        }
+                    });
+
+                    nextBtn.addEventListener('click', () => {
+                        const visibleCards = getVisibleCards();
+                        if (currentIndex < totalCards - visibleCards) {
+                            currentIndex++;
+                            updateCarousel();
+                        }
+                    });
+
+                    let resizeTimeout;
+                    window.addEventListener('resize', () => {
+                        clearTimeout(resizeTimeout);
+                        resizeTimeout = setTimeout(() => {
+                            const visibleCards = getVisibleCards();
+                            if (currentIndex > totalCards - visibleCards) {
+                                currentIndex = Math.max(0, totalCards - visibleCards);
+                            }
+                            updateCarousel();
+                        }, 200);
+                    });
+
+                    updateCarousel();
+                });
+            </script>
+
+
+
+            <!-- new end-->
         </div>
     </section>
 
